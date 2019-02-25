@@ -1,7 +1,12 @@
 import Link from 'next/link';
+import Head from 'next/head';
 
-const Layout = ({children}) => (
+const Layout = ({children, title, description}) => (
     <div className="container">
+        <Head>
+            <title>{title}</title>
+            <meta name="description" content={description}/>
+        </Head>
         <nav>
             <Link href="/">
                 <a>
